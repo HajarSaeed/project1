@@ -74,29 +74,49 @@ class MashaweirScreen extends StatelessWidget {
               ),
             ],
           ),),
+          const SizedBox(height: 9,),
           Container(
             decoration: BoxDecoration(
-              color: Colors.amber,
-              borderRadius: BorderRadius.circular(18)
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(18),
+              boxShadow: [
+                BoxShadow(color: Colors.grey,blurRadius: 2)
+              ]
             ),
             child: const Column(
               children: [
                 Padding(
                   padding: EdgeInsets.all(8.0),
-                  child: ShippingItem(label: "New Shipping",icon: Icons.add,)
+                  child: ShippingItem(label: "New Shipping",iconPath: AppAssets.add,)
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 4.0),
                   child: Divider(color: Colors.grey,),
                 ),
+                ////////////////////////////////////
                 Padding(
                     padding: EdgeInsets.all(8.0),
-                    child: ShippingItem(label: "Track Shipping",icon: Icons.add,)
+                    child: ShippingItem(label: "Track Shipping",iconPath: AppAssets.track,)
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 4.0),
                   child: Divider(color: Colors.grey,),
                 ),
+                /////////////////////////////////////////
+                Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: ShippingItem(label: "Search and query",iconPath: AppAssets.search,)
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 4.0),
+                  child: Divider(color: Colors.grey,),
+                ),
+                /////////////////////////////////////////////
+                Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: ShippingItem(label: "Calculate shipping costs",iconPath: AppAssets.attachMoney,)
+                ),
+
               ],
             ),
           )
